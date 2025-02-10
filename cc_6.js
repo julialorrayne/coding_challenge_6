@@ -60,4 +60,11 @@ console.log(`Total Cost: $${calculateSubscriptionCost("Basic", 6, 10)}`); // Exp
 console.log(`Total Cost: $${calculateSubscriptionCost("Premium", 12, 0)}`); // Expected output: "Total Cost: $240"
 // logged results to the console
 
+//Task 5: Returning Values
+const convertCurrency = (amount, exchangeRate) => {
+    return (amount * exchangeRate)
+}; //created a function convertCurrency that returns the converted amount.
 
+console.log(`Converted Amount: $${convertCurrency(100, 1.1).toFixed(2)}`); 
+console.log(`Converted Amount: $${convertCurrency(250, 0.85).toFixed(2)}`); 
+//logged results to console
