@@ -96,3 +96,21 @@ let tracker = createExpenseTracker(); //created function that calls createExpens
 console.log(tracker(200)); 
 console.log(tracker(150)); 
 //logged results to console
+
+//Task 8: Recursion in JavaScript
+function YearsToPromotion(employeeLevel){
+    if (employeeLevel >= 10) {
+        return 0;
+    }
+    return 2 + YearsToPromotion(employeeLevel + 1)
+}
+
+function calculateYearsToPromotion (employeeLevel){
+    const years = YearsToPromotion(employeeLevel);
+    return`Years to level 10: ${years}`;
+}
+//recursive function calculateYearsToPromotion(employeeLevel) that determines years to reach level 10.
+
+console.log(calculateYearsToPromotion(7)); 
+console.log(calculateYearsToPromotion(5)); 
+//logged results to console
