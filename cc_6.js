@@ -16,3 +16,26 @@ function calculateSalesTax (amount, taxRate) {
 console.log(`Sales tax: $${Math.round(calculateSalesTax(100, 0.07))}`);
 console.log(`Sales tax: $${Math.round(calculateSalesTax(500, 0.1))}`);  
 //logged results to the console
+
+//Task 3: Arrow Function
+const calculateBonus = (salary, performanceRating) => {
+    if (performanceRating === "Excellent"){
+        return 0.2*salary
+    };
+    if (performanceRating === "Good"){
+        return 0.1*salary
+    };
+    if (performanceRating === "Average"){
+        return 0.05*salary
+    }
+    else {
+        return "invalid"
+    };
+}; //function to calculate bonus based on the following rules:
+//"Excellent" → 20% of salary.
+//"Good" → 10% of salary.
+//"Average" → 5% of salary.
+
+console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`); 
+console.log(`Bonus: $${calculateBonus(7000, "Good")}`);   
+//logged results to console   
