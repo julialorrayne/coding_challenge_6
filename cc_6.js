@@ -39,3 +39,25 @@ const calculateBonus = (salary, performanceRating) => {
 console.log(`Bonus: $${calculateBonus(5000, "Excellent")}`); 
 console.log(`Bonus: $${calculateBonus(7000, "Good")}`);   
 //logged results to console   
+
+//Task 4: Parameters and Arguments
+const calculateSubscriptionCost = (plan, months, discount = 0) => {
+    if (plan === "Basic") {
+        return (months * 10) - discount
+    }
+    if (plan === "Premium") {
+        return months * 20
+    }
+    if (plan === "Enterprise") {
+        return (months * 50) - discount
+    }
+} // created function that calculates total cost based on the following criteria:
+//"Basic" = $10/month
+//"Premium" = $20/month
+//"Enterprise" = $50/month
+
+console.log(`Total Cost: $${calculateSubscriptionCost("Basic", 6, 10)}`); // Expected output: "Total Cost: $50"
+console.log(`Total Cost: $${calculateSubscriptionCost("Premium", 12, 0)}`); // Expected output: "Total Cost: $240"
+// logged results to the console
+
+
